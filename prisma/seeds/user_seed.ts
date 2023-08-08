@@ -7,16 +7,13 @@ const prisma = new PrismaClient();
 const config = new ConfigService();
 
 export async function main() {
-    let email = faker.internet.email()
-    let password = await bcrypt.hash('password', parseInt(config.get('SALT')))
+    let password = await bcrypt.hash('P@5sword', parseInt(config.get('SALT')))
 
-    await prisma.user.upsert({
-        where: { email },
-        update: {},
-        create: {
-            email,
+    await prisma.user.create({
+        data: {
+            email: faker.internet.email(),
             password,
-            username: faker.internet.displayName(),
+            username: 'last_born_001',
         }
     })
 }

@@ -16,11 +16,10 @@
 ```bash
 $ npm install
 ```
-- Run migration
+- Run migration and seeds
 ```bash
 $ npm run migration:dev
 ```
-- 
 
 ## Running the app
 
@@ -33,4 +32,15 @@ $ npm run start:dev
 
 # production mode
 $ npm run start:prod
+```
+
+## Documentation
+Documentation can be found [here](http://127.0.0.1:3000/doc). Note that documentation runs locally wherever the API is hosted.
+
+## Notes
+For the purpose of testing the app, credentials has been set
+### Credentials
+```json
+  "username": "last_born_001"
+  "password": "P@5sword"
 ```
